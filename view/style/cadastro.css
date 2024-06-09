@@ -156,3 +156,155 @@ button {
     height: 5%;
     background-color: #F78B1F;
 }
+
+/* Responsividade */
+
+@media (max-width: 1200px) {
+    .container {
+        width: 70%;
+        height: 80%;
+    }
+
+    .container-right {
+        width: 50%;
+    }
+
+    .logo {
+        font-size: 29px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    .btn-cadastro {
+        top: 80%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 80%;
+        height: 75%;
+    }
+
+    .container-left {
+        width: 35%;
+    }
+
+    .container-right {
+        width: 46%;
+    }
+
+    .sistema_container-left {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type=text], input[type=email] {
+        margin: 4.6% auto;
+    }
+
+    .btn-cadastro {
+        top: 78%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: 80%;
+    }
+
+    .container-left {
+        width: 40%;
+    }
+
+    .container-right {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-top: 10%;
+    }
+
+    input[type=text], input[type=email] {
+        width: 85%;
+        margin: 7% auto;
+    }
+
+    .btn-cadastro {
+        top: 78%;
+    }
+}
+
+
+
+@media (max-width: 628px) {
+    .container {
+        width: 95%;
+        height: 100%;
+        top: 5%;
+    }
+
+    .container-left {
+        width: 100%;
+        height: 16%;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .container-right {
+        width: 98%;
+        height: 100%;
+        top: 15%;
+        right: 0;
+    }
+
+    h1 {
+        margin: 5% auto;
+        font-size: 16px;
+    }
+
+    .formRow {
+        flex-direction: column;
+    }
+
+    input[type=text], input[type=email] {
+        width: 87%;
+        margin: 4% auto;
+    }
+
+    .btn-cadastro {
+        top: 70%;
+    }
+}
+
+@media (max-width: 523px) {
+    input[type=text], input[type=email] {
+        width: 87%;
+        margin: 5% auto;
+    }
+
+    .btn-cadastro {
+        top: 70%;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 26px;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    .btn-cadastro {
+        font-size: 14px;
+        top: 60%;
+    }
+}
