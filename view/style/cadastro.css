@@ -91,7 +91,6 @@ h1 {
 
 .formRow{
     display: flex;
-    /* align-items: center; */
     margin-bottom: 30px;
     width: 100%;
 }
@@ -100,7 +99,6 @@ form{
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 input[type=text],
@@ -130,6 +128,11 @@ button {
 }
 
 .btn-cadastro {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%);
+
     color: #005594;
     padding: 5px 30px;
     font-weight: 600;
@@ -149,7 +152,7 @@ button {
     bottom: 17%;
     left: 50%;
     transform: translateX(-50%);
-    width: 20%;
-    height: .3%;
+    width: 60%;
+    height: 5%;
     background-color: #F78B1F;
 }
