@@ -24,7 +24,7 @@ body {
     transform: translate(-50%);
 
     width: 60%;
-    height: 80%;
+    height: 75%;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -32,12 +32,12 @@ body {
 
 .container-left {
     position: absolute;
-    content: ''; /* Conteúdo vazio para o pseudo-elemento */
-    top: 0; /* Posição superior */
-    left: 0; /* Posição direita */
-    width: 30%; /* Largura da parte azul */
-    height: 100%; /* Altura total do elemento */
-    background-color: #005594; /* Cor azul */
+    content: ''; 
+    top: 0; 
+    left: 0; 
+    width: 30%; 
+    height: 100%; 
+    background-color: #005594; 
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
 }
@@ -56,13 +56,13 @@ body {
 }
 
 .logo::after {
-    content: ''; /* Conteúdo vazio para o pseudo-elemento */
+    content: '';
     position: absolute;
-    bottom: 10%; /* Posição inferior */
-    left: -6.5px; /* Posição esquerda */
-    width: 108%; /* Largura total do elemento */
-    height: 2%; /* Altura da linha */
-    background-color: #fff; /* Cor cinza claro */
+    bottom: 10%; 
+    left: -6.5px; 
+    width: 108%; 
+    height: 2%; 
+    background-color: #fff; 
 }
 
 .sistema_container-left {
@@ -70,4 +70,86 @@ body {
     width: 60%;
     font-weight: 300;
     font-size: 16px;
+}
+
+.container-right {
+    position: absolute;
+    content: ''; 
+    top: 0; 
+    right: 10%;
+    width: 50%; 
+    height: 100%; 
+}
+
+h1 {
+    text-align: center;
+    margin: 8% auto;
+    color: #005594;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.formRow{
+    display: flex;
+    /* align-items: center; */
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+input[type=text],
+input[type=email]{
+    border: none;
+    border-bottom: 1px solid #F78B1F;
+    outline: none;
+    padding: 3px 0;
+    width: 78%;
+    margin: 3.5% 1%;
+    transition: border 300ms ease-in-out;
+}
+
+input[type=text]:focus,
+input[type=email]:focus{
+    border-bottom: 1px solid #814810;
+}
+
+input[type=text]::placeholder,
+input[type=email]::placeholder{
+    color: #9C9C9C;
+    font-size: 13px;
+}
+
+button {
+    background: none;
+}
+
+.btn-cadastro {
+    color: #005594;
+    padding: 5px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    margin: 25px 0;
+}
+
+.btn-cadastro:hover{
+    color: #F78B1F;
+    cursor: pointer;
+}
+
+.btn-cadastro::after {
+    content: '';
+    position: absolute;
+    bottom: 17%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: .3%;
+    background-color: #F78B1F;
 }
