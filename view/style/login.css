@@ -83,3 +83,18 @@ body{
         left: 60%;
     }
 }
+
+.logo, .bemVindo__wrapper{
+    position: absolute;
+    z-index: 6;
+    color: #fff;
+    left: 5%;
+}
+
+.logo{
+    top: 6%;
+}
+
+.bemVindo__wrapper{
+    bottom: 6%;
+}
