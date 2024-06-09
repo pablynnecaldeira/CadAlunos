@@ -7,21 +7,67 @@
     font-family: Poppins;
 }
 
-.filter {
-    background-color: #D9D9D9;
-    width: 100%;
-    height: 100%;
-    opacity: 0.8;
-    position: absolute;
-    z-index: 99;
-}
-
 body {
     height: 100vh;
-    background-image: url(../img/img\ backgroud.jpg);
+    background-image: url(../img/img-background.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: opacity(100%);
+    position: relative;
 }
 
+.container {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
 
+    width: 60%;
+    height: 80%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.container-left {
+    position: absolute;
+    content: ''; /* Conteúdo vazio para o pseudo-elemento */
+    top: 0; /* Posição superior */
+    left: 0; /* Posição direita */
+    width: 30%; /* Largura da parte azul */
+    height: 100%; /* Altura total do elemento */
+    background-color: #005594; /* Cor azul */
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+
+.logo, .sistema_container-left {
+    position: absolute;
+    z-index: 6;
+    color: #fff;
+    left: 5%;
+}
+
+.logo {
+    top: 3%;
+    left: 2%;
+    font-size: 32px;
+}
+
+.logo::after {
+    content: ''; /* Conteúdo vazio para o pseudo-elemento */
+    position: absolute;
+    bottom: 10%; /* Posição inferior */
+    left: -6.5px; /* Posição esquerda */
+    width: 108%; /* Largura total do elemento */
+    height: 2%; /* Altura da linha */
+    background-color: #fff; /* Cor cinza claro */
+}
+
+.sistema_container-left {
+    bottom: 6%;
+    width: 60%;
+    font-weight: 300;
+    font-size: 16px;
+}
