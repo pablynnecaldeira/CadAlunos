@@ -26,12 +26,10 @@ body {
   top: 10%;
   transform: translate(-50%);
 
-  /* max-width: 1200px;
-    max-height: 1920px; */
   width: 60%;
   height: 73%;
   background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
 }
 
