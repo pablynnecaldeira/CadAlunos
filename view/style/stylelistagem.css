@@ -1,0 +1,75 @@
+body {
+    font-family: Arial;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    position: relative; /* Adicionado */
+}
+
+.titulo {
+    width: 175px;
+    color: #005594;
+    font-weight:normal;
+    border-bottom: 1px solid #F78B1F;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #F78B1F;
+}
+
+td.acao{
+    border-bottom: none;
+    
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    background-color: #FFFFFF;
+    color: #F78B1F;
+}
+    
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-voltar {
+    color: #005594;
+    font-weight:bold;
+    align-self: flex-end;
+}
+
+button {
+    
+    background: none; /* Remover o fundo */
+    padding: 0; /* Remover o padding */
+    margin: 0; /* Remover a margem */
+    border: none; /* Remover a borda */
+    background: none; /* Remover o fundo */
+    cursor: pointer; /* Mostrar o cursor de pointer */
+}
+
+button.action-voltar {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    
+
+}
