@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./View/style/login.css">
-    <title>Login</title>
+    <link rel="stylesheet" href="../View/style/login.css">
+    <title>Cadastro</title>
 </head>
 <body>
     <div class="container">
@@ -15,16 +15,16 @@
 
         <div class="bkgWrapper">
             <div class="bkg1">
-                <img src="./View/img/bkg1.png" />
+                <img src="../View/img/bkg1.png" />
             </div>
             <div class="bkg2">
-                <img src="./View/img/bkg2.png" />
+                <img src="../View/img/bkg2.png" />
             </div>
         </div>
 
         <div class="loginWrapper">
-            <form method="POST" action="./Controller/login.php">
-                <h1>Faça seu login</h1>
+        <form method="POST" action="processa_cadastro.php">
+                <h1>Cadastre-se</h1>
 
                 <div class="formRow">
                     <svg width="25" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -42,9 +42,9 @@
                     <input type="password" placeholder="Digite sua senha" name="senha" required>
                 </div>
 
-                <input type="submit" value="Entrar"/>
+                <input type="submit" value="Cadastrar"/>
 
-                <span>Não tem uma conta? <a href="./Models/cadastro.php">Cadastre-se</a></span>
+                <span>Já tem uma conta? <a href="../index.php">Faça o login</a></span>
             </form>
         </div>
 
