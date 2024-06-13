@@ -10,31 +10,45 @@ body {
     margin: 50px auto;
     background-color: #FFFFFF;
     padding: 20px;
-    position: relative; /* Adicionado */
+    position: relative; 
 }
 
+#tirarnegrito{
+    font-weight: normal;
+    
+}
 .titulo {
     width: 175px;
     color: #005594;
     font-weight:normal;
-    border-bottom: 1px solid #F78B1F;
+    height: 32px;
+    border-bottom: 1.5px solid #F78B1F;
+    left:0;
+    padding-left: 38px;
+    
 }
 
 
 table {
-    width: 100%;
+    width:100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #F78B1F;
+    padding-left: 0;
 }
 
 td.acao{
     border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 12px;
+    width: 53px;
+
+    
     
 }
 
@@ -43,6 +57,7 @@ th {
     text-align: left;
     background-color: #FFFFFF;
     color: #F78B1F;
+    padding-left: 0;
 }
     
 
@@ -54,16 +69,18 @@ tr:hover {
     color: #005594;
     font-weight:bold;
     align-self: flex-end;
+    border-bottom: 1.3px solid #F78B1F;
+
 }
 
 button {
     
-    background: none; /* Remover o fundo */
-    padding: 0; /* Remover o padding */
-    margin: 0; /* Remover a margem */
-    border: none; /* Remover a borda */
-    background: none; /* Remover o fundo */
-    cursor: pointer; /* Mostrar o cursor de pointer */
+    background: none; 
+    padding: 0; 
+    margin: 0;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
 }
 
 button.action-voltar {
@@ -73,3 +90,4 @@ button.action-voltar {
     
 
 }
+
