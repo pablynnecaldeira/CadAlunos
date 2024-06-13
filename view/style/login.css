@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+body{
+    height: 100vh;
+}
+
+.container{
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.bkgWrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bkg1, .bkg2{
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    top: 0;
+}
+
+.bkg1{
+    z-index: 4;
+    left: 0;
+    width: 50vw;
+}
+
+.bkg2{
+    right: 0;
+    z-index: 2;
+    width: 60vw;
+}
+
+.bkg1 img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bkg2 img{
+    top: -5%;
+    height: 110%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loginWrapper{
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 6px 6px 10px #0000001a;
+    height: 470px;
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    padding: 40px 30px 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1250px) {
+    .bkg2 img{
+        top: -7%;
+        left: 55%;
+    }
+}
+
+@media screen and (max-width: 1005px) {
+    .bkg2 img{
+        left: 60%;
+    }
+}
+
+.logo, .bemVindo__wrapper{
+    position: absolute;
+    z-index: 6;
+    color: #fff;
+    left: 5%;
+}
+
+.logo{
+    top: 6%;
+}
+
+.bemVindo__wrapper{
+    bottom: 6%;
+    font-size: 22px;
+    width: 160px;
+}
+
+h1{
+    color: #005594;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.formRow{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+svg{
+    padding: 3px 0;
+}
+
+input[type=submit]{
+    border: 1.5px solid #005594;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #005594;
+    padding: 5px 30px;
+    font-weight: 500;
+    margin: 25px 0;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out ;
+}
+
+input[type=submit]:hover{
+    color: #fff;
+    cursor: pointer;
+    background-color: #005594;
+}
+
+input[type=text],
+input[type=password]{
+    border: none;
+    border-bottom: 1px solid #F78B1F;
+    outline: none;
+    padding: 3px 0;
+    width: 100%;
+    margin-left: 10px;
+    transition: border 300ms ease-in-out;
+}
+
+input[type=text]:focus,
+input[type=password]:focus{
+    border-bottom: 1px solid #814810;
+}
+
+input[type=text]::placeholder,
+input[type=password]::placeholder{
+    color: #9C9C9C;
+    font-size: 13px;
+}
+
+form span{
+    color: #005594;
+    font-size: 14px;
+}
+
+form span a{
+    color: #F78B1F;
+    font-weight: 500;
+    transition: opacity 300ms ease-in-out;
+}
+
+form span a:hover{
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 680px) {
+    .bkg1{
+        width: 100vw;
+    }
+    
+    .bkg2{
+        display: none;
+    }
+
+    .bemVindo__wrapper{
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .bemVindo__wrapper, .logo{
+        width: 100%;
+        text-align: center;
+        left: 0;
+    }
+    .logo{
+        top: 5%;
+    }
+    .bemVindo__wrapper{
+        bottom: 5%;
+    }
+    .loginWrapper{
+        width: 100%;
+        padding: 40px 14px;
+        border-radius: 12px;
+    }
+}

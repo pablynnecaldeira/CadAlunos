@@ -1,0 +1,186 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/woman.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); /* Ajuste a opacidade aqui */
+    z-index: -1;
+}
+
+.dados {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.topo {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.titulo {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #004AAD;
+    margin-bottom: 0;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+label i {
+    margin-right: 10px;
+    color: #FF6F00;
+}
+
+.insert-dados {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.insert-dados label {
+    flex: 0 0 auto;
+}
+
+.insert-dados input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: none;
+    border-bottom: 2px solid #FF6F00;
+    padding: 5px;
+    font-size: 1em;
+    color: #004AAD;
+    background-color: transparent;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-bottom: 2px solid #004AAD;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+    color: #004AAD;
+}
+
+button {
+    background: none;
+    color: #004AAD;
+    border: none;
+    border-bottom: 2px solid #004AAD;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    border-bottom: 2px solid #68a4ee;
+}
+
+.limpar {
+    background: none;
+    color: #004AAD;
+    border: none;
+    border-bottom: 2px solid #004AAD;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.limpar:hover {
+    border-bottom: 2px solid #68a4ee;
+    text-decoration: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .dados {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .titulo {
+        font-size: 1.2em;
+    }
+
+    .insert-dados {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .insert-dados label,
+    .insert-dados input,
+    .insert-dados .icons {
+        flex: 1;
+        margin-top: 0;
+    }
+
+    .insert-dados label {
+        flex: 0 0 auto;
+    }
+
+    .insert-dados input {
+         /* width: calc(100% - 80px);Subtraindo a largura dos ícones */
+        margin-right: 0;
+    }
+
+    .icons {
+        flex: 0 0 auto;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
