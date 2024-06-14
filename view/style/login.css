@@ -104,6 +104,11 @@ body{
     bottom: 6%;
     font-size: 22px;
     width: 160px;
+
+}
+
+.bemVindo__wrapper a {
+    color: #fff ;
 }
 
 h1{
