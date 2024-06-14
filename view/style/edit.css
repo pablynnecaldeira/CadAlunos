@@ -9,10 +9,10 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: url('woman.png');
+    background-image: url('../img/woman.png');
     background-size: cover;
     background-position: center;
-    font-family: Poppins, sans-serif !important;
+    font-family: Poppins, sans-serif;
 }
 
 body::after {
@@ -27,8 +27,8 @@ body::after {
 }
 
 .dados {
-    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 20px 20px 0;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 90%;
@@ -85,7 +85,7 @@ body::after {
 label {
     display: inline-block;
     font-size: 1.1em;
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
 }
 
 label i {
@@ -145,6 +145,7 @@ input[type="email"]:focus {
 .icons button:focus {
     border-bottom: none;
     padding: 0;
+    border-bottom: 1px solid #004AAD;
 }
 
 .icons {
@@ -173,6 +174,14 @@ button {
 
 button:hover {
     border-bottom: 1px solid #004AAD;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    border-bottom: 1px solid #68a4ee;
 }
 
 .limpar {
@@ -184,6 +193,8 @@ button:hover {
     font-weight: 500;
     margin-top: 10px;
     font-family: Poppins;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
 .limpar:hover {
@@ -214,7 +225,6 @@ button:hover {
     .insert-dados label,
     .insert-dados input,
     .insert-dados .icons {
-        /* flex: 1; */
         flex: auto;
         margin-top: 0;
     }
@@ -224,10 +234,8 @@ button:hover {
     }
 
     .insert-dados input {
-         /* width: calc(100% - 80px);Subtraindo a largura dos ícones */
         margin-right: 0;
         width: 100%;
-        margin-right: 12px;
     }
 
     .icons {
