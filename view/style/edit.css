@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html{
+    font-family: Poppins, sans-serif; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('../img/woman.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Poppins, sans-serif;
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6); /* Ajuste a opacidade aqui */
+    z-index: -1;
+}
+
+.dados {
+    background-color: #ffffff;
+    padding: 20px 20px 20px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+.topo {
+    margin-bottom: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.topo h3{
+    color: #004AAD;
+    font-weight: 600;   
+    margin: 0;
+    padding: 0 0 0 20px;
+}
+
+.titulo {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #004AAD;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: 100%;
+    border-bottom: 1px solid #FF6F00;
+    margin-bottom: 6px;
+    padding: 0 5px 0 20px;
+}
+
+.titulo strong{
+    font-weight: 700;
+}
+
+.forms{
+    padding: 0 0 0 20px;
+}
+
+.forms form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+label i {
+    margin-right: 10px;
+    color: #FF6F00;
+}
+
+.insert-dados {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.insert-dados label {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.insert-dados label i {
+    height: 8px;
+}
+
+.insert-dados input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #FF6F00;
+    padding: 5px;
+    font-size: 1em;
+    color: #004AAD;
+    background-color: transparent;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-bottom: 1px solid #004AAD;
+}
+
+.icons button, .icons label {
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+}
+
+.icons button:hover, .icons label:hover {
+    border-bottom: transparent;
+}
+
+.icons label i, .icons button i {
+    height: auto;
+    margin: 0;
+    margin: 4px 0 0 0;
+}
+
+.icons button:focus {
+    border-bottom: none;
+    padding: 0;
+    border-bottom: 1px solid #004AAD;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons i {
+    cursor: pointer;
+    color: #004AAD;
+}
+
+button {
+    background: none;
+    color: #004AAD;
+    border: none;
+    border-bottom: 1px solid #FF6F00;
+    padding: 0px 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 700;
+    font-family: Poppins;
+    font-size: 15px;
+    line-height: 100%;
+}
+
+button:hover {
+    border-bottom: 1px solid #004AAD;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button:hover {
+    border-bottom: 1px solid #68a4ee;
+}
+
+.limpar {
+    background: none;
+    color: #004AAD;
+    border: none;
+    border-bottom: 1px solid #FF6F00;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 10px;
+    font-family: Poppins;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.limpar:hover {
+    border-bottom: 2px solid #68a4ee;
+    text-decoration: none;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .dados {
+        width: 90%;
+    }
+
+    .titulo {
+        font-size: 1.2em;
+    }
+
+    .insert-dados {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .insert-dados label,
+    .insert-dados input,
+    .insert-dados .icons {
+        flex: auto;
+        margin-top: 0;
+    }
+
+    .insert-dados label {
+        flex: 0 0 auto;
+    }
+
+    .insert-dados input {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .icons {
+        flex: 0 0 auto;
+        justify-content: flex-end;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

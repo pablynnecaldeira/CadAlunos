@@ -54,18 +54,16 @@ body {
 
 .logo {
   top: 3%;
-  left: 2%;
+  left: 0;
   font-size: 32px;
-}
-
-.logo::after {
-  content: "";
-  position: absolute;
-  bottom: 10%;
-  left: -6.5px;
-  width: 108%;
-  height: 2%;
-  background-color: #fff;
+  width: 100%;
+  }
+  
+  .logo a {
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 3%;
 }
 
 .sistema_container-left {
@@ -231,10 +229,6 @@ button {
     width: 40%;
   }
 
-  .logo {
-    left: 3%;
-  }
-
   .container-right {
     width: 40%;
     height: 100%;
@@ -267,10 +261,6 @@ button {
     width: 100%;
     height: 16%;
     border-radius: 16px 16px 0 0;
-  }
-
-  .logo {
-    left: 1.2%;
   }
 
   .container-right {
@@ -318,10 +308,6 @@ button {
 }
 
 @media screen and (max-width: 523px) {
-  .logo {
-    left: 1.7%;
-  }
-
   .sistema_container-left {
     font-size: 14px;
     width: 100%;
