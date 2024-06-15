@@ -28,6 +28,11 @@ body {
     
 }
 
+.titulo a {
+    text-decoration: none;
+    color: #005594;
+}
+
 
 table {
     width:100%;
@@ -47,6 +52,10 @@ td.acao{
     padding-bottom: 0;
     padding-left: 12px;
     width: 55px;   
+}
+
+.acao a{
+    text-decoration: none;
 }
 
 th {
@@ -84,7 +93,6 @@ button.action-voltar {
     position: absolute;
     bottom: -20px;
     right: 20px;
-    
-
+    font-size: 1rem;
 }
 
