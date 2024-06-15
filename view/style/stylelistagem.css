@@ -1,0 +1,98 @@
+body {
+    font-family: Arial;
+    background-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    position: relative; 
+}
+
+#tirarnegrito{
+    font-weight: normal;
+    
+}
+.titulo {
+    width: 175px;
+    color: #005594;
+    font-weight:normal;
+    height: 32px;
+    border-bottom: 1.5px solid #F78B1F;
+    left:0;
+    padding-left: 38px;
+    
+}
+
+.titulo a {
+    text-decoration: none;
+    color: #005594;
+}
+
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #F78B1F;
+    padding-left: 0;
+}
+
+td.acao{
+    border-bottom: none;
+    padding-bottom: 0;
+    padding-left: 12px;
+    width: 55px;   
+}
+
+.acao a{
+    text-decoration: none;
+}
+
+th {
+    padding: 12px;
+    text-align: left;
+    background-color: #FFFFFF;
+    color: #F78B1F;
+    padding-left: 0;
+}
+    
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.action-voltar {
+    color: #005594;
+    font-weight:bold;
+    align-self: flex-end;
+    border-bottom: 1.3px solid #F78B1F;
+
+}
+
+button {
+    
+    background: none; 
+    padding: 0; 
+    margin: 0;
+    border: none; 
+    background: none; 
+    cursor: pointer; 
+}
+
+button.action-voltar {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    font-size: 1rem;
+}
+
