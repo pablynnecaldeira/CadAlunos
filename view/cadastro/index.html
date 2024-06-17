@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="../style/cadastro.css">
+    <link rel="stylesheet" href="../style/modal.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
     <div class="container-body">
         <div class="container">
             <div class="container-left">
                 <div class="logo">
-                    <a href="../../index.html"><span><strong>CAD</strong> Alunos</span></a>
+                    <a href="../../index.php"><span><strong>CAD</strong> Alunos</span></a>
                 </div>
                 <div class="sistema_container-left">
                     <span>Sistema de cadastro de usuários</span>
@@ -40,10 +43,27 @@
                         <img class="svg" src="../img/endereço icon.svg" alt="endereço icon">
                         <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
                     </div>
-                    <a href="../listagem/index.html"><button class="btn-cadastro" type="submit">Cadastrar</button></a>
+                    <button class="btn-cadastro" id="openModal" type="button">Cadastrar</button>
                 </form>
                     </div>
             </div>
     </div>
+    
+    <!-- Start Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cadastro Criado com sucesso!</h5>
+                </div>
+                <div class="modal-footer" style="display: flex; justify-content: center; color: white;">
+                    <a href="../listagem/index.html" type="button" class="btn btn-success">Confirmar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <script src="../script/script.js"></script>
 </body>
 </html>
