@@ -6,7 +6,7 @@ class ControleUsuario
         private $servername = "localhost";
         private $username = "root";
         private $password = "";
-        private $dbname = "dbpoo";
+        private $dbname = "user_cadastro";
         private $conn;
 
         public function __construct()
@@ -22,6 +22,7 @@ class ControleUsuario
 
         public function __destruct()
         {
+                // Fechar conexão com o banco de dados
                 $this->conn->close();
         }
 
@@ -93,7 +94,39 @@ class ControleUsuario
                         die("Erro ao cadastrar usuário: " . $this->conn->error);
                 }
         }
+
         // Precisa agora fazer updateUsuario com os dados inseridos posteriormente no formulario onde tem nome, rg, email, cpf....
+}
+
+// Verificar se o formulário de cadastro foi enviado
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Sanitizar entradas do formulário
+        $nome = htmlspecialchars($_POST['nome']);
+        $email = htmlspecialchars($_POST['email']);
+        $senha = htmlspecialchars($_POST['senha']);
+        $cpf = htmlspecialchars($_POST['cpf']);
+        $rg = htmlspecialchars($_POST['rg']);
+        $endereco = htmlspecialchars($_POST['endereco']);
+
+        // Validar e-mail, se necessário
+
+        // Instanciar a classe ControleUsuario
+        $ControleUsuario = new ControleUsuario();
+
+        // Cadastrar o usuário (inserção ou atualização)
+        $idLogin = $ControleUsuario->cadastrarUsuario($email, $senha);
+
+        // Verificar se o cadastro do login foi bem-sucedido
+        if ($idLogin || $idLogin === true) { // Verifica se foi inserção (ID válido) ou atualização (true)
+                // Cadastrar dados do usuário
+                $ControleUsuario->cadastrarDadosUsuario($nome, $cpf, $rg, $endereco, $email, $idLogin);
+
+                // Exibir mensagem de sucesso e redirecionar
+                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='../index.php';</script>";
+        } else {
+                // Exibir mensagem de erro
+                echo "<script>alert('Erro ao cadastrar usuário.'); window.location.href='../view/cadastro.php';</script>";
+        }
 }
 
 /*
