@@ -19,7 +19,7 @@
             <h3>Editar dados</h3>
         </div>
         <div class="forms">
-            <form action="" method="post">
+            <form id="formUpdate" action="../../controller/index.php" method="post">
                 <div class="insert-dados">
                     <label for="nome"><i class="bi bi-person"></i></label>
                     <input type="text" id="nome" name="nome" value="">
@@ -78,7 +78,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="closeModal btn btn-secondary">Fechar</button>
-                                <a href="../listagem/index.html" type="submit" class="btn btn-danger">Confirmar</a>
+                                <button id="modalAtualizar" class="btn btn-danger modalAtualizar">Confirmar</button>
                             </div>
                         </div>
                     </div>

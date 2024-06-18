@@ -1,17 +1,27 @@
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModal");
+const modalCadastro = document.getElementById("modalCadastro");
+const modalAtualizar = document.querySelector("modalAtualizar");
 const closeModalBtn = document.querySelector(".closeModal");
 
 btn.addEventListener("click", () => {
-    modal.style.display = "block";
+  modal.style.display = "block";
 });
 
-closeModalBtn.addEventListener("click", () => {
-    modal.style.display = "none";
+closeModalBtn?.addEventListener("click", (e) => {
+  modal.style.display = "none";
+});
+
+modalCadastro?.addEventListener("click", () => {
+  document.getElementById("formCadastro").submit();
+});
+
+modalAtualizar?.addEventListener("click", () => {
+  document.getElementById("formUpdate").submit();
 });
 
 window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
 });
