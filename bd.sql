@@ -1,5 +1,6 @@
 CREATE DATABASE dbpoo;
 USE dbpoo;
+<<<<<<< HEAD
 
 CREATE TABLE `dbpoo`.`login` (
   `idlogin` INT NOT NULL AUTO_INCREMENT,
@@ -9,6 +10,8 @@ CREATE TABLE `dbpoo`.`login` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+=======
+>>>>>>> 20213aadf25907a891f638f53fa5de77f8fd03a7
 CREATE TABLE usuario (
   id_usuario INT NOT NULL AUTO_INCREMENT,
   nome VARCHAR(150) NOT NULL,
@@ -22,9 +25,21 @@ CREATE TABLE usuario (
   FOREIGN KEY (idLogin) REFERENCES login(idLogin)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+<<<<<<< HEAD
 
 
 
+=======
+CREATE TABLE `dbpoo`.`login` (
+  `idlogin` INT NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(150) NOT NULL,
+  `senha` VARCHAR(150) NOT NULL,
+  PRIMARY KEY (`idlogin`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+>>>>>>> 20213aadf25907a891f638f53fa5de77f8fd03a7
 /*
 
 ALTER TABLE `dbpoo`.`usuario` 
