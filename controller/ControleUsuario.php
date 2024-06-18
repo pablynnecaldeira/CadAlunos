@@ -93,6 +93,52 @@ class ControleUsuario
                         die("Erro ao cadastrar usuário: " . $this->conn->error);
                 }
         }
+
+        public function listarUsuarios()
+        {
+                $sql = "
+                        SELECT 
+                            u.id_usuario,
+                            u.nome,
+                            u.cpf,
+                            u.rg,
+                            u.endereco,
+                            u.email AS email,
+                            u.ativo,
+                            l.idlogin,
+                            l.senha
+                        FROM 
+                            usuario u
+                        JOIN 
+                            login l ON u.idLogin = l.idlogin";
+
+                $result = $this->conn->query($sql);
+                return $result;
+        }
+
+        public function pegarUsuariosPorId($id)
+        {
+                $sql = "
+                        SELECT 
+                            u.id_usuario,
+                            u.nome,
+                            u.cpf,
+                            u.rg,
+                            u.endereco,
+                            u.email AS email,
+                            u.ativo,
+                            l.idlogin,
+                            l.senha
+                        FROM 
+                            usuario u
+                        JOIN 
+                            login l ON u.idLogin = l.idlogin
+                        WHERE 
+                            u.id_usuario = $id;";
+
+                $result = $this->conn->query($sql);
+                return $result;
+        }
         // Precisa agora fazer updateUsuario com os dados inseridos posteriormente no formulario onde tem nome, rg, email, cpf....
 }
 
