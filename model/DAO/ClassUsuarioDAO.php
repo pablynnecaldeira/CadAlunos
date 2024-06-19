@@ -5,7 +5,7 @@ class UsuarioDAO extends Connect
 {
     public function insertUsuario(Usuario $usuario)
     {
-       $sql = "INSERT INTO usuario(nome,cpf,rg,endereco,email,ativo) VALUES (?,?,?,?,?,?)";
+       $sql = "INSERT INTO usuario(nome,cpf,rg,endereco,email,ativo,idLogin) VALUES (?,?,?,?,?,?,?)";
        $statement = $this->connection->prepare($sql);
        $statementDados = array(
            $usuario->getNome(),
@@ -14,12 +14,13 @@ class UsuarioDAO extends Connect
            $usuario->getEndereco(),
            $usuario->getEmail(),
            $usuario->getAtivo(),
+           $usuario->getIdLogin()
        );
        if($statement->execute($statementDados))
-            echo 'Registro inserido com sucesso';
+            return true;
         else
         {
-            echo 'Erro ao executar o script no banco';
+            return false;
         }    
     }
 
@@ -33,7 +34,6 @@ class UsuarioDAO extends Connect
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
             return $result;
         } else {
-            echo 'Erro ao executar o script no banco';
             return [];
         }
     }
