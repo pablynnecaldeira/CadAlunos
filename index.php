@@ -44,12 +44,12 @@
 
                 <input type="submit" value="Entrar"/>
 
-                <span>Não tem uma conta? <a href="view/cadastro/index.html">Cadastre-se</a></span>
+                <span>Não tem uma conta? <a href="view/cadastro/index.php">Cadastre-se</a></span>
             </form>
         </div>
 
         <div class="bemVindo__wrapper">
-            <span>Bem vindo ao <a href="view/equipes/index.html"><strong>CAD</strong> Alunos!</a></span>
+            <span>Bem vindo ao <a href="view/equipes/index.php"><strong>CAD</strong> Alunos!</a></span>
         </div>
     </div>
 </body>
