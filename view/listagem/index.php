@@ -71,8 +71,8 @@
                     <p>Após excluído não há como recuperar os dados, tenha certeza se é o que deseja...</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="closeModal btn btn-secondary">Fechar</button>
-                    <button type="button" class="btn btn-danger">Confirmar</button>
+                    <button class="btn-modal">Fechar</button>
+                    <button type="button" class="btn-modal">Confirmar</button>
                 </div>
             </div>
         </div>

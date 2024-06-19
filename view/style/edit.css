@@ -45,6 +45,19 @@ body::after {
     align-items: baseline;
 }
 
+.topo h1 {
+    font-size: 29px;
+}
+
+.topo a {
+    color: #004AAD;
+    text-decoration: none;
+}
+
+.topo a:hover {
+    text-decoration: none;
+}
+
 .topo h3{
     color: #004AAD;
     font-weight: 600;   
@@ -147,12 +160,6 @@ input[type="email"]:focus {
     margin: 4px 0 0 0;
 }
 
-.icons button:focus {
-    border-bottom: none;
-    padding: 0;
-    border-bottom: 1px solid #004AAD;
-}
-
 .icons {
     display: flex;
     gap: 10px;
@@ -171,25 +178,12 @@ button {
     padding: 0px 6px;
     cursor: pointer;
     margin-top: 10px;
-    font-weight: 700;
     font-family: Poppins;
     font-size: 15px;
     line-height: 100%;
 }
 
-button:hover {
-    border-bottom: 1px solid #004AAD;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 10px;
-}
-
-button:hover {
-    border-bottom: 1px solid #68a4ee;
-}
-
-.limpar {
+.btn-edit-voltar, .btn-edit-salvar {
     background: none;
     color: #004AAD;
     border: none;
@@ -202,9 +196,14 @@ button:hover {
     margin-top: 10px;
 }
 
-.limpar:hover {
-    border-bottom: 2px solid #68a4ee;
+.btn-edit-voltar:hover, 
+.btn-edit-salvar:hover {
     text-decoration: none;
+    color: #FF6F00;
+}
+
+.btn-edit-salvar {
+    font-weight: 700;
 }
 
 .action-buttons {

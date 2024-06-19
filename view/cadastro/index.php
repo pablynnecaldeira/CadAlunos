@@ -60,10 +60,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Cadastro Criado com sucesso!</h5>
+                    <h5 class="modal-title"><span>Cadastro</span> criado com sucesso!</h5>
                 </div>
-                <div class="modal-footer" style="display: flex; justify-content: center; color: white;">
-                    <a href="../listagem/index.php" type="button" class="btn btn-success">Confirmar</a>
+                <div class="modal-footer">
+                    <a href="../listagem/index.php" type="button" class="btn-modal">Confirmar</a>
                 </div>
             </div>
         </div>
