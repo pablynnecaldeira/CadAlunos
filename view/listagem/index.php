@@ -7,8 +7,6 @@
     <title>Cadastro de Alunos</title>
     <link rel="stylesheet" href="../style/stylelistagem.css">
     <link rel="stylesheet" href="../style/modal.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
@@ -71,8 +69,8 @@
                     <p>Após excluído não há como recuperar os dados, tenha certeza se é o que deseja...</p>
                 </div>
                 <div class="modal-footer">
-                    <button class="closeModal btn btn-secondary">Fechar</button>
-                    <button type="button" id="modalExcluir" class="btn btn-danger">Confirmar</button>
+                    <button class="btn-modal">Fechar</button>
+                    <button type="button" id="modalExcluir" class="btn-modal">Confirmar</button>
                 </div>
             </div>
         </div>

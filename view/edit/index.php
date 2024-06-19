@@ -24,7 +24,7 @@
             
         ?>
         <div class="topo">
-            <h1 class="titulo"><strong>CAD</strong> Alunos</h1>
+            <h1 class="titulo"><a href="../../index.php"><strong>CAD</strong> Alunos</a></h1>
             <h3>Editar dados</h3>
         </div>
         <div class="forms">
@@ -71,8 +71,8 @@
                 </div>
 
                 <div class="action-buttons">
-                    <a href="../listagem/index.php"><button type="button" class="limpar">Voltar</button></a>
-                    <button type="button" id="openModal">Salvar</button>
+                    <a href="../listagem/index.php"><button type="button" class="btn-edit-voltar">Voltar</button></a>
+                    <button type="button" class="btn-edit-salvar" id="openModal">Salvar</button>
                 </div>
 
                 <!-- Start Modal -->
@@ -86,8 +86,8 @@
                                 <p>Após atualizados não há como recuperar os dados anteriores, tenha certeza se é o que deseja...</p>
                             </div>
                             <div class="modal-footer">
-                                <button class="closeModal btn btn-secondary">Fechar</button>
-                                <button id="modalAtualizar" class="btn btn-danger">Confirmar</button>
+                                <button class="btn-modal">Fechar</button>
+                                <a href="../listagem/index.php" id="modalAtualizar" type="submit" class="btn-modal">Confirmar</a>
                             </div>
                         </div>
                     </div>

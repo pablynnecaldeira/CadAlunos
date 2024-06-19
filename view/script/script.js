@@ -8,7 +8,7 @@ btn.addEventListener("click", (e) => {
   modal.style.display = "block";
 });
 
-closeModalBtn?.addEventListener("click", (e) => {
+closeModalBtn?.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
