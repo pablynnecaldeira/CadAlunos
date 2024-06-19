@@ -6,7 +6,7 @@ class ControleUsuario
         private $servername = "localhost";
         private $username = "root";
         private $password = "";
-        private $dbname = "user_cadastro";
+        private $dbname = "dbpoo";
         private $conn;
 
         public function __construct()
@@ -22,7 +22,6 @@ class ControleUsuario
 
         public function __destruct()
         {
-                // Fechar conexão com o banco de dados
                 $this->conn->close();
         }
 
@@ -95,37 +94,55 @@ class ControleUsuario
                 }
         }
 
-        // Precisa agora fazer updateUsuario com os dados inseridos posteriormente no formulario onde tem nome, rg, email, cpf....
-}
+        public function listarUsuarios()
+        {
+                $sql = "
+                        SELECT 
+                            u.id_usuario,
+                            u.nome,
+                            u.cpf,
+                            u.rg,
+                            u.endereco,
+                            u.email AS email,
+                            u.ativo,
+                            l.idlogin,
+                            l.senha
+                        FROM 
+                            usuario u
+                        JOIN 
+                            login l ON u.idLogin = l.idlogin";
 
-// Verificar se o formulário de cadastro foi enviado
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Sanitizar entradas do formulário
-        $nome = htmlspecialchars($_POST['nome']);
-        $email = htmlspecialchars($_POST['email']);
-        $senha = htmlspecialchars($_POST['senha']);
-        $cpf = htmlspecialchars($_POST['cpf']);
-        $rg = htmlspecialchars($_POST['rg']);
-        $endereco = htmlspecialchars($_POST['endereco']);
+                $result = $this->conn->query($sql);
+                return $result;
+        }
 
-        // Validar e-mail, se necessário
+        public function pegarUsuarioPorId($id)
+        {
+                $sql = "
+                        SELECT 
+                            u.id_usuario,
+                            u.nome,
+                            u.cpf,
+                            u.rg,
+                            u.endereco,
+                            u.email AS email,
+                            u.ativo,
+                            l.idlogin,
+                            l.senha
+                        FROM 
+                            usuario u
+                        JOIN 
+                            login l ON u.idLogin = l.idlogin
+                        WHERE 
+                            u.id_usuario = $id;";
 
-        // Instanciar a classe ControleUsuario
-        $ControleUsuario = new ControleUsuario();
+                $result = $this->conn->query($sql);
+                return $result;
+        }
 
-        // Cadastrar o usuário (inserção ou atualização)
-        $idLogin = $ControleUsuario->cadastrarUsuario($email, $senha);
-
-        // Verificar se o cadastro do login foi bem-sucedido
-        if ($idLogin || $idLogin === true) { // Verifica se foi inserção (ID válido) ou atualização (true)
-                // Cadastrar dados do usuário
-                $ControleUsuario->cadastrarDadosUsuario($nome, $cpf, $rg, $endereco, $email, $idLogin);
-
-                // Exibir mensagem de sucesso e redirecionar
-                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='../index.php';</script>";
-        } else {
-                // Exibir mensagem de erro
-                echo "<script>alert('Erro ao cadastrar usuário.'); window.location.href='../view/cadastro.php';</script>";
+        public function editarUsuario($id, $nome, $email, $cpf, $rg, $endereco)
+        {
+                // atualizar dados
         }
 }
 
