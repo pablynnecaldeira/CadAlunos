@@ -39,9 +39,9 @@ class UsuarioDAO extends Connect
             $usuario->getIdLogin()
         );
         if ($statement->execute($statementDados)) {
-             echo 'Registro atualizado com sucesso';
+             return 'Registro atualizado com sucesso';
              } else {
-                 echo 'Erro ao executar o script no banco';
+                return 'Erro ao executar o script no banco';
                 }
             }
 
