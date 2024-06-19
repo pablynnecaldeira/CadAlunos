@@ -35,9 +35,9 @@ class Usuario
         return $this->cpf;
     }
     
-    public function setCpf($telefone)
+    public function setCpf($cpf)
     {
-        $this->telefone = $telefone;
+        $this->cpf = $cpf;
     }
 
     public function getRg()
@@ -45,9 +45,9 @@ class Usuario
         return $this->rg;
     }
     
-    public function setRg($celular)
+    public function setRg($rg)
     {
-        $this->celular = $celular;
+        $this->rg = $rg;
     }
 
     public function getEndereco(){
