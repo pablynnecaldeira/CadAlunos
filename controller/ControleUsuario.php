@@ -116,7 +116,7 @@ class ControleUsuario
                 return $result;
         }
 
-        public function pegarUsuariosPorId($id)
+        public function pegarUsuarioPorId($id)
         {
                 $sql = "
                         SELECT 
@@ -139,7 +139,11 @@ class ControleUsuario
                 $result = $this->conn->query($sql);
                 return $result;
         }
-        // Precisa agora fazer updateUsuario com os dados inseridos posteriormente no formulario onde tem nome, rg, email, cpf....
+
+        public function editarUsuario($id, $nome, $email, $cpf, $rg, $endereco)
+        {
+                // atualizar dados
+        }
 }
 
 /*

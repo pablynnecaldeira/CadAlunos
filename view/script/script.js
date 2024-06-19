@@ -1,10 +1,10 @@
 const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModal");
 const modalCadastro = document.getElementById("modalCadastro");
-const modalAtualizar = document.querySelector("modalAtualizar");
+const modalAtualizar = document.getElementById("modalAtualizar");
 const closeModalBtn = document.querySelector(".closeModal");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
   modal.style.display = "block";
 });
 

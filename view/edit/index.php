@@ -14,15 +14,24 @@
 
 <body>
     <div class="dados">
+        <?php
+            include('../../controller/ControleUsuario.php');
+
+            $controller = new ControleUsuario();
+            $id = $_REQUEST['id'];
+            $res = $controller->pegarUsuarioPorId($id);
+            $row = $res->fetch_assoc();
+            
+        ?>
         <div class="topo">
             <h1 class="titulo"><strong>CAD</strong> Alunos</h1>
             <h3>Editar dados</h3>
         </div>
         <div class="forms">
-            <form id="formUpdate" action="../../controller/index.php" method="post">
+           <form id="formUpdate" action="<?php echo "../../controller/index.php?acao=editar&id=$row[id_usuario]" ?>" method="post">
                 <div class="insert-dados">
                     <label for="nome"><i class="bi bi-person"></i></label>
-                    <input type="text" id="nome" name="nome" value="">
+                    <input type="text" id="nome" name="nome" value="<?php echo $row['nome']?>">
                     <div class="icons">
                         <label for="nome"><i class="bi bi-pencil"></i></label>
                         <button type="reset"><i class="bi bi-x-circle"></i></button>
@@ -30,7 +39,7 @@
                 </div>
                 <div class="insert-dados">
                     <label for="email"><i class="bi bi-envelope"></i></label>
-                    <input type="email" id="email" name="email" value="">
+                    <input type="email" id="email" name="email" value="<?php echo $row['email']?>">
                     <div class="icons">
                         <label for="email"><i class="bi bi-pencil"></i></label>
                         <button type="reset"><i class="bi bi-x-circle"></i></button>
@@ -38,7 +47,7 @@
                 </div>
                 <div class="insert-dados">
                     <label for="cpf"><i class="bi bi-person-vcard"></i></label>
-                    <input type="text" id="cpf" name="cpf" value="">
+                    <input type="text" id="cpf" name="cpf" value="<?php echo $row['cpf']?>">
                     <div class="icons">
                         <label for="cpf"><i class="bi bi-pencil"></i></label>
                         <button type="reset"><i class="bi bi-x-circle"></i></button>
@@ -46,7 +55,7 @@
                 </div>
                 <div class="insert-dados">
                     <label for="rg"><i class="bi bi-person-lines-fill"></i></label>
-                    <input type="text" id="rg" name="rg" value="">
+                    <input type="text" id="rg" name="rg" value="<?php echo $row['rg']?>">
                     <div class="icons">
                         <label for="rg"><i class="bi bi-pencil"></i></label>
                         <button type="reset"><i class="bi bi-x-circle"></i></button>
@@ -54,7 +63,7 @@
                 </div>
                 <div class="insert-dados">
                     <label for="endereco"><i class="bi bi-geo-alt"></i></label>
-                    <input type="text" id="endereco" name="endereco" value="">
+                    <input type="text" id="endereco" name="endereco" value="<?php echo $row['endereco']?>">
                     <div class="icons">
                         <label for="endereco"><i class="bi bi-pencil"></i></label>
                         <button type="reset"><i class="bi bi-x-circle"></i></button>
@@ -62,7 +71,7 @@
                 </div>
 
                 <div class="action-buttons">
-                    <a href="../listagem/index.html"><button type="button" class="limpar">Voltar</button></a>
+                    <a href="../listagem/index.php"><button type="button" class="limpar">Voltar</button></a>
                     <button type="button" id="openModal">Salvar</button>
                 </div>
 
@@ -78,13 +87,13 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="closeModal btn btn-secondary">Fechar</button>
-                                <button id="modalAtualizar" class="btn btn-danger modalAtualizar">Confirmar</button>
+                                <button id="modalAtualizar" class="btn btn-danger">Confirmar</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- End Modal -->
-            </form>
+            </form>'
         </div>
     </div>
     
