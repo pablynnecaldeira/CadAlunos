@@ -63,7 +63,7 @@
                     <h5 class="modal-title">Cadastro Criado com sucesso!</h5>
                 </div>
                 <div class="modal-footer" style="display: flex; justify-content: center; color: white;">
-                    <a href="../listagem/index.html" type="button" class="btn btn-success">Confirmar</a>
+                    <a href="../listagem/index.php" type="button" class="btn btn-success">Confirmar</a>
                 </div>
             </div>
         </div>

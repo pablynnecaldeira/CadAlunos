@@ -78,7 +78,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button class="closeModal btn btn-secondary">Fechar</button>
-                                <a href="../listagem/index.html" type="submit" class="btn btn-danger">Confirmar</a>
+                                <a href="../listagem/index.php" type="submit" class="btn btn-danger">Confirmar</a>
                             </div>
                         </div>
                     </div>
