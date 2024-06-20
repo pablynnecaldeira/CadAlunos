@@ -58,7 +58,7 @@
             <a href="../../index.php"><button class="action-voltar">Voltar</button></a>
         </div>
     </div>
-
+    
     <!-- Start Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
