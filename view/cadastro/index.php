@@ -68,7 +68,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <span>Deseja concluir o cadastro?</span>
+                        <span>Deseja finalizar o cadastro?</span>
                     </h5>
                 </div>
                 <div class="modal-footer">
