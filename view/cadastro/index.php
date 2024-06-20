@@ -68,7 +68,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">
-                        <span>Tem Certeza que Deseja Excluir?</span>
+                        <span>Deseja concluir o cadastro?</span>
                     </h5>
                 </div>
                 <div class="modal-footer">
