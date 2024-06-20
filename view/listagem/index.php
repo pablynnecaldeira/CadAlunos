@@ -16,48 +16,50 @@
         </a>
     </div>
     <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>CPF</th>
-                    <th>Endereço</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                include ('../../controller/ControleUsuario.php');
+        <div class="container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>CPF</th>
+                        <th>Endereço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    include ('../../controller/ControleUsuario.php');
 
-                $controller = new ControleUsuario();
-                $res = $controller->listarUsuarios();
-                
-                while ($row = $res->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['nome'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['cpf'] . "</td>";
-                    echo "<td>" . $row['endereco'] . "</td>";
-                    echo '<td class="acao">';
-                    echo "<a href='../edit/index.php?id=" . $row['id_usuario'] . "'>";
-                    echo '  <button class="action-btn">
-                                <img src="../img/editar icon.svg" alt="logoEdicao">
-                            </button>
-                          </a>';
-                    echo '<button class="action-btn" id="openModal" data-id=' . $row['id_usuario'] . '>
-                               <img src="../img/excluir icon.svg" alt="logoEdicao">
-                          </button>';
-                    echo '</td>';
-                    echo '</tr>';
-                }
-                ?>
-            </tbody>
-        </table>
-        <div class="voltar">
-            <a href="../../index.php"><button class="action-voltar">Voltar</button></a>
+                    $controller = new ControleUsuario();
+                    $res = $controller->listarUsuarios();
+                    
+                    while ($row = $res->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . $row['nome'] . "</td>";
+                        echo "<td>" . $row['email'] . "</td>";
+                        echo "<td>" . $row['cpf'] . "</td>";
+                        echo "<td>" . $row['endereco'] . "</td>";
+                        echo '<td class="acao">';
+                        echo "<a href='../edit/index.php?id=" . $row['id_usuario'] . "'>";
+                        echo '  <button class="action-btn">
+                                    <img src="../img/editar icon.svg" alt="logoEdicao">
+                                </button>
+                            </a>';
+                        echo '<button class="action-btn" id="openModal" data-id=' . $row['id_usuario'] . '>
+                                <img src="../img/excluir icon.svg" alt="logoEdicao">
+                            </button>';
+                        echo '</td>';
+                        echo '</tr>';
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <div class="voltar">
+                <a href="../../index.php"><button class="action-voltar">Voltar</button></a>
+            </div>
         </div>
     </div>
-
+    
     <!-- Start Modal -->
     <div class="modal" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
