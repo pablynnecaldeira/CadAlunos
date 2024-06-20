@@ -1,19 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-body {
-    font-family: 'Poppins';
-    background-color: #FFFFFF;
+*{
     margin: 0;
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f78b1f19;
+    border-radius: 11px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F78B1F;
+    border-radius: 11px;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: #f0f0f04e;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container-wrapper{
+    padding: 0 20px;
+}
+
 .container {
-    width: 90%;
     margin: 50px auto;
     background-color: #FFFFFF;
-    /* padding: 20px; */
-    padding: 0;
+    padding: 0 10px 20px 20px;
     position: relative;
+    border-radius: 5px;
+    overflow: auto;
 }
 
 #tirarnegrito {
@@ -21,14 +46,14 @@ body {
 }
 
 .titulo {
-    width: 12rem;
+    width: 250px;
     color: #005594;
     font-weight: normal;
     height: 2.5rem;
     border-bottom: 1.5px solid #F78B1F;
     left: 0;
     padding-left: 38px;
-
+    margin-top: 20px;
 }
 
 .titulo a {
@@ -69,9 +94,15 @@ th {
     padding-left: 0;
 }
 
-
 tr:hover {
     background-color: #f1f1f1;
+}
+
+.voltar{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    padding-right: 16px;
 }
 
 .action-voltar {
@@ -79,6 +110,8 @@ tr:hover {
     font-weight: bold;
     align-self: flex-end;
     border-bottom: 1.3px solid #F78B1F;
+    font-size: 18px;
+
 }
 
 button {
@@ -90,13 +123,6 @@ button {
     cursor: pointer;
 }
 
-.action-voltar {
-    position: absolute;
-    top: 9rem;
-    right: 1.2rem;
-    font-size: 1rem;
-}
-
 .action-voltar:hover,
 .action-voltar:active,
 .action-voltar:focus {
@@ -104,28 +130,14 @@ button {
 }
 
 /* responsividade */
-@media screen and (max-width: 940px) {
-    .container {
-        padding: 0;
-        width: 93%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .container {
-        padding: 0;
-        width: 95%;
-    }
-}
-
 @media screen and (max-width: 745px) {
-    .container {
+    /* .container {
         display: block;
         overflow-x: auto;
         width: 100%;
         height: 100vh;
         padding: 0 1rem;
-    }
+    } */
 
     table {
         border-collapse: collapse;
@@ -133,14 +145,7 @@ button {
     }
 
     .voltar {
-        position: relative;
-    }
-    
-    .action-voltar {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        top: 2rem;
-        width: 3.2rem;
+        justify-content: center;
+        padding: 0;
     }
 }
