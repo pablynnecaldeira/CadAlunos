@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  height: 100vh;
+}
+
+.container-body {
+  height: 100%;
+  background-image: url(../img/img-background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50%);
+  min-height: 500px;
+  width: 60%;
+  height: 73%;
+  background-color: #fff;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.container-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30%;
+  height: 100%;
+  background-color: #005594;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.logo,
+.sistema_container-left {
+  position: absolute;
+  z-index: 6;
+  color: #fff;
+  left: 5%;
+}
+
+.logo {
+  top: 3%;
+  left: 0;
+  font-size: 32px;
+  width: 100%;
+  }
+  
+  .logo a {
+  border-bottom: 1px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  padding-left: 3%;
+}
+
+.sistema_container-left {
+  bottom: 6%;
+  width: 60%;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.container-right {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10%;
+  width: 50%;
+}
+
+h1 {
+  text-align: center;
+  margin:0 auto 30px auto;
+  color: #005594;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.formRow {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #f78b1f;
+  outline: none;
+  padding: 3px 0;
+  width: 100%;
+  transition: border 300ms ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus  {
+  border-bottom: 1px solid #814810;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: #9c9c9c;
+  font-size: 13px;
+}
+
+button {
+  background: none;
+}
+
+.form-group{
+  display: flex;
+  gap: 6px;
+}
+
+.form-group-senha{
+  align-items: center;
+}
+
+.form-group-senha > div{
+  min-width: 30px;
+  display: flex ;
+  justify-content: center;
+}
+
+.btn-cadastro {
+  color: #005594;
+  padding: 5px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  margin: 25px auto 0 auto;
+  padding: 0;
+  border-bottom: 2px solid #f78b1f;
+}
+
+.btn-cadastro:hover {
+  color: #f78b1f;
+  cursor: pointer;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 68%;
+    height: 80%;
+  }
+
+  .container-right {
+    width: 50%;
+  }
+
+  .logo {
+    font-size: 29px;
+  }
+
+  .sistema_container-left {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 80%;
+  }
+
+  .container-left {
+    width: 35%;
+  }
+
+  .container-right {
+    right: 8%;
+  }
+
+  .sistema_container-left {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 634px) {
+  .container {
+    width: calc(100vw - 40px);
+    height: auto;
+    min-height: 580px;
+  }
+
+  .container-left {
+    width: 100%;
+    height: 16%;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .container-right {
+    padding: 0 25px;
+    width: 100%;
+    top: 15%;
+    right: 0;
+    transform: none;
+  }
+
+  h1 {
+    margin: 40px auto;
+  }
+
+  .formRow {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 523px) {
+  .sistema_container-left {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 388px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .sistema_container-left {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .container-left {
+    height: 15%;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .container-right {
+    height: 86%;
+  }
+
+  h1{
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 358px) {
+  h1{
+    margin: 30px auto;
+  }
+
+  .container {
+    min-height: 600px;
+  }
+}
