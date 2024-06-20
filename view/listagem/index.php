@@ -27,29 +27,30 @@
             </thead>
             <tbody>
                 <?php
-                include ('../../controller/ControleUsuario.php');
+                    include ('../../model/ClassUsuarioDAO.php');
 
-                $controller = new ControleUsuario();
-                $res = $controller->listarUsuarios();
+                    $controller = new ClassUsuarioDAO();
+                    $res = $controller->getUsuarios();
+
+                    foreach($res as $row) {
+                        echo "<tr>";
+                        echo "<td>" . $row['nome'] . "</td>";
+                        echo "<td>" . $row['email'] . "</td>";
+                        echo "<td>" . $row['cpf'] . "</td>";
+                        echo "<td>" . $row['endereco'] . "</td>";
+                        echo '<td class="acao">';
+                        echo "<a href='../edit/index.php?id=" . $row['id_usuario'] . "'>";
+                        echo '  <button class="action-btn">
+                                    <img src="../img/editar icon.svg" alt="logoEdicao">
+                                </button>
+                            </a>';
+                        echo '<button class="action-btn" id="excluirOpenModal" data-id="' . $row['id_usuario'] . '">
+                                <img src="../img/excluir icon.svg" alt="logoEdicao">
+                            </button>';
+                        echo '</td>';
+                        echo '</tr>';
+                    }
                 
-                while ($row = $res->fetch_assoc()) {
-                    echo "<tr>";
-                    echo "<td>" . $row['nome'] . "</td>";
-                    echo "<td>" . $row['email'] . "</td>";
-                    echo "<td>" . $row['cpf'] . "</td>";
-                    echo "<td>" . $row['endereco'] . "</td>";
-                    echo '<td class="acao">';
-                    echo "<a href='../edit/index.php?id=" . $row['id_usuario'] . "'>";
-                    echo '  <button class="action-btn">
-                                <img src="../img/editar icon.svg" alt="logoEdicao">
-                            </button>
-                          </a>';
-                    echo '<button class="action-btn" id="openModal" data-id=' . $row['id_usuario'] . '>
-                               <img src="../img/excluir icon.svg" alt="logoEdicao">
-                          </button>';
-                    echo '</td>';
-                    echo '</tr>';
-                }
                 ?>
             </tbody>
         </table>

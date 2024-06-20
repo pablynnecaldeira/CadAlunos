@@ -57,6 +57,7 @@
                     </div>
                     <button class="btn-cadastro" id="openModal" type="button">Cadastrar</button>
                 </form>
+
             </div>
         </div>
     </div>
@@ -66,17 +67,20 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title"><span>Cadastro</span> criado com sucesso!</h5>
+                    <h5 class="modal-title">
+                        <span>Tem Certeza que Deseja Excluir?</span>
+                    </h5>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="modalCadastro" class="btn-modal">Confirmar</button>
+                    <button class="btn-modal" type="button" id="closeModal">Fechar</button>
+                    <button type="button" id="btnCadastro" class="btn-modal">Confirmar</button>
                 </div>
             </div>
         </div>
     </div>
     <!-- End Modal -->
-
     <script src="../script/script.js"></script>
+
 </body>
 
 </html>

@@ -120,21 +120,18 @@ class ControleUsuario
         {
                 $sql = "
                         SELECT 
-                            u.id_usuario,
-                            u.nome,
-                            u.cpf,
-                            u.rg,
-                            u.endereco,
-                            u.email AS email,
-                            u.ativo,
-                            l.idlogin,
-                            l.senha
+                            id_usuario,
+                            nome,
+                            cpf,
+                            rg,
+                            endereco,
+                            email AS email,
+                            ativo,
+                            idlogin,
                         FROM 
-                            usuario u
-                        JOIN 
-                            login l ON u.idLogin = l.idlogin
+                            usuarios
                         WHERE 
-                            u.id_usuario = $id;";
+                            id_usuario = $id;";
 
                 $result = $this->conn->query($sql);
                 return $result;

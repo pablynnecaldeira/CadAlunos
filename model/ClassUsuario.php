@@ -10,6 +10,16 @@ class Usuario
     private $ativo;
     private $idLogin;
 
+    public function __construct($nome, $cpf, $rg, $endereco, $email, $ativo, $idLogin) {
+        $this->nome = $nome;
+        $this->cpf = $cpf;
+        $this->rg = $rg;
+        $this->endereco = $endereco;
+        $this->email = $email;
+        $this->ativo = $ativo;
+        $this->idLogin = $idLogin;
+    }
+
     public function getIdUsuario()
     {
         return $this->idUsuario;

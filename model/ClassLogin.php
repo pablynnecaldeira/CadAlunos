@@ -1,9 +1,14 @@
 <?php
 
-class Login{
+class Login {
     private $idLogin;
     private $email;
     private $senha;
+
+    public function __construct($email, $senha) {
+        $this->email = $email;
+        $this->senha = $senha;
+    }
 
     function getIdLogin(){
         return $this->idLogin;

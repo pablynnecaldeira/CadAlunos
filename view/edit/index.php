@@ -15,13 +15,13 @@
 <body>
     <div class="dados">
         <?php
-            include('../../controller/ControleUsuario.php');
+            include('../../model/ClassUsuarioDAO.php');
+            include('../../model/ClassLoginDAO.php');
 
-            $controller = new ControleUsuario();
+            $controller = new ClassUsuarioDAO();
             $id = $_REQUEST['id'];
-            $res = $controller->pegarUsuarioPorId($id);
-            $row = $res->fetch_assoc();
-            
+            $row = $controller->getUsuariosPerId($id);
+            // $row = $res->fetch_asso();
         ?>
         <div class="topo">
             <h1 class="titulo"><a href="../../index.php"><strong>CAD</strong> Alunos</a></h1>
@@ -70,6 +70,8 @@
                     </div>
                 </div>
 
+                <input type="hidden" id="id_login" name="id_login" value="<?php echo $row['idLogin']?>">
+
                 <div class="action-buttons">
                     <a href="../listagem/index.php"><button type="button" class="btn-edit-voltar">Voltar</button></a>
                     <button type="button" class="btn-edit-salvar" id="openModal">Salvar</button>
@@ -86,8 +88,8 @@
                                 <p>Após atualizados não há como recuperar os dados anteriores, tenha certeza se é o que deseja...</p>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn-modal">Fechar</button>
-                                <a href="../listagem/index.php" id="modalAtualizar" type="submit" class="btn-modal">Confirmar</a>
+                                <button type="button" id="closeModal" class="btn-modal">Fechar</button>
+                                <button id="modalAtualizar" type="submit" class="btn-modal">Confirmar</button>
                             </div>
                         </div>
                     </div>
@@ -96,9 +98,6 @@
             </form>'
         </div>
     </div>
-    
-    
-
     <script src="../script/script.js"></script>
 </body>
 
